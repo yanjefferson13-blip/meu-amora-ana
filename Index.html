@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para você ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,serif;background:linear-gradient(135deg,#fff0f5,#ffe1eb,#fff7fa);color:#6b2945;overflow-x:hidden}
+button{font:inherit}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative}
+.intro{text-align:center}
+.intro h1{font-size:clamp(2rem,8vw,4.5rem);margin:0 0 12px;animation:soft 2s ease-in-out infinite}
+.intro p{font-size:1.15rem}
+.heart-btn{border:0;background:#e94f7c;color:white;border-radius:999px;padding:16px 30px;cursor:pointer;box-shadow:0 10px 30px #d94c7438;transition:.3s}
+.heart-btn:hover{transform:scale(1.06)}
+#main{display:none}
+.container{max-width:1000px;margin:auto;padding:45px 20px 80px;text-align:center}
+h2{font-size:2rem;margin-top:40px}
+.letter{background:#ffffffaa;backdrop-filter:blur(8px);padding:28px;border-radius:25px;box-shadow:0 10px 40px #9d466622;line-height:1.8;font-size:1.08rem}
+.counter{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px 0}
+.time{background:#fff;padding:16px 20px;border-radius:18px;min-width:90px;box-shadow:0 5px 20px #9d46661c}
+.time b{display:block;font-size:1.6rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.photo{background:white;padding:10px;border-radius:20px;box-shadow:0 8px 25px #9d466622;transform:rotate(var(--r));transition:.3s}
+.photo:hover{transform:rotate(0) scale(1.03)}
+.photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;background:#ffd5e2}
+.caption{padding:10px 4px 5px;font-size:.95rem}
+.messages{display:grid;gap:14px}
+.msg{background:#fff;padding:18px 22px;border-radius:20px;box-shadow:0 5px 20px #9d46661a;animation:appear .8s ease both}
+.secret{margin-top:30px}
+#secret{display:none;margin-top:18px;padding:20px;background:#fff0f5;border-radius:20px}
+.heart{position:fixed;bottom:-30px;font-size:22px;pointer-events:none;animation:float linear forwards;opacity:.65;z-index:5}
+@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes soft{50%{transform:scale(1.03)}}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<section id="intro" class="screen">
+  <div class="intro">
+    <div style="font-size:70px">💗</div>
+    <h1>Tenho uma coisinha pra você...</h1>
+    <p>Mas você precisa abrir. 👀</p>
+    <button class="heart-btn" onclick="enter()">Abrir meu coração ❤️</button>
+  </div>
+</section>
+
+<main id="main">
+<div class="container">
+  <div style="font-size:55px">❤️</div>
+  <h1>Para a pessoa que faz meus dias mais bonitos</h1>
+
+  <section class="letter">
+    <p>Eu não sei exatamente em que momento você deixou de ser só alguém especial e virou uma parte tão importante da minha vida.</p>
+    <p>Só sei que, desde então, meus dias ficaram mais bonitos com você neles.</p>
+    <p>Essa página é só uma pequena tentativa de guardar um pouquinho do que nós somos. ❤️</p>
+  </section>
+
+  <h2>⏳ Nosso tempo</h2>
+  <div class="counter">
+    <div class="time"><b id="days">0</b>dias</div>
+    <div class="time"><b id="hours">0</b>horas</div>
+    <div class="time"><b id="mins">0</b>minutos</div>
+    <div class="time"><b id="secs">0</b>segundos</div>
+  </div>
+
+  <h2>📸 Nossas memórias</h2>
+  <div class="gallery">
+    <div class="photo" style="--r:-2deg"><img src="foto1.jpg" alt="Nossa foto 1"><div class="caption">Uma memória nossa ❤️</div></div>
+    <div class="photo" style="--r:2deg"><img src="foto2.jpg" alt="Nossa foto 2"><div class="caption">Mais um momento que eu guardo.</div></div>
+    <div class="photo" style="--r:-1deg"><img src="foto3.jpg" alt="Nossa foto 3"><div class="caption">Você + eu = nós. 💗</div></div>
+    <div class="photo" style="--r:3deg"><img src="foto4.jpg" alt="Nossa foto 4"><div class="caption">Eu escolheria viver isso de novo.</div></div>
+    <div class="photo" style="--r:-3deg"><img src="foto5.jpg" alt="Nossa foto 5"><div class="caption">Uma das minhas favoritas.</div></div>
+    <div class="photo" style="--r:1deg"><img src="foto6.jpg" alt="Nossa foto 6"><div class="caption">Só mais uma lembrança nossa. 🥹</div></div>
+  </div>
+
+  <h2>💌 Algumas coisas que eu queria te dizer</h2>
+  <div class="messages">
+    <div class="msg">“Se eu pudesse escolher de novo, ainda escolheria você.”</div>
+    <div class="msg">“Meu lugar favorito continua sendo perto de você.”</div>
+    <div class="msg">“Entre todas as pessoas que eu poderia ter conhecido, que sorte a minha ter encontrado você.”</div>
+    <div class="msg">“Às vezes eu olho pra você e penso: caralho, como eu tive sorte? KKKKK ❤️”</div>
+    <div class="msg">“Eu gosto de você nos dias bons, nos dias ruins e até nos dias em que você me estressa.” 😭</div>
+    <div class="msg">“Se um dia você esquecer o quanto é importante pra mim, volta aqui.”</div>
+  </div>
+
+  <div class="secret">
+    <button class="heart-btn" onclick="secret()">💗 Tem uma mensagem escondida...</button>
+    <div id="secret">👀 Você achou.<br><br><b>Eu escolheria você mais uma vez. E mais uma. E mais uma.</b> ❤️</div>
+  </div>
+</div>
+</main>
+
+<script>
+const inicio = new Date("2025-03-28T00:00:00"); // Data em que vocês começaram ❤️
+
+function enter(){
+  document.getElementById("intro").style.display="none";
+  document.getElementById("main").style.display="block";
+  window.scrollTo(0,0);
+  setInterval(updateCounter,1000);
+  updateCounter();
+  for(let i=0;i<35;i++) setTimeout(makeHeart,i*180);
+}
+function updateCounter(){
+  let diff=Math.max(0,Date.now()-inicio.getTime());
+  let s=Math.floor(diff/1000);
+  document.getElementById("days").textContent=Math.floor(s/86400);
+  document.getElementById("hours").textContent=Math.floor(s%86400/3600);
+  document.getElementById("mins").textContent=Math.floor(s%3600/60);
+  document.getElementById("secs").textContent=s%60;
+}
+function makeHeart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.textContent=["❤️","💕","💗","💖","💘"][Math.floor(Math.random()*5)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(5+Math.random()*6)+"s";
+  h.style.fontSize=(15+Math.random()*20)+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),12000);
+}
+function secret(){
+  document.getElementById("secret").style.display="block";
+}
+setInterval(makeHeart,700);
+</script>
+</body>
+</html>
